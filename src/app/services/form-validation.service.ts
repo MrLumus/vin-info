@@ -29,13 +29,7 @@ export class FormValidationService {
   }
 
   isValidVin(vin: string): IValidate {
-    return {
-      isValid: true,
-      error: '',
-    };
-    let regex = new RegExp(
-      '^[A-HJ-NPR-Za-hj-npr-z0-9]{8}[0-9X][A-HJ-NPR-Za-hj-npr-z0-9]{2}[0-9]{6}$'
-    );
+    let regex = /^[A-HJ-NPR-Z0-9]{17}$/i
     const isValid = regex.test(vin);
 
     if (isValid) {
