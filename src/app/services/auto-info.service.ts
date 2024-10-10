@@ -24,8 +24,7 @@ export class AutoInfoService {
   async getAuutoIngoByChassieNumber(chassie: string) {
     const body = {
       chassisNumber: chassie,
-      // date: getCurrentDateAsString(),
-      date: "05.03.2024",
+      date: getCurrentDateAsString(),
       key: 'PUBAPIKEY631681',
     };
 
@@ -67,7 +66,7 @@ export class AutoInfoService {
   async getAutoInfoByVIN(vin: string) {
     const body = {
       vin: vin,
-      date: "05.03.2024",
+      date: getCurrentDateAsString(),
       key: 'PUBAPIKEY631681',
     };
 
