@@ -1,0 +1,98 @@
+<div class="max-w-2xl pb-24">
+  <div class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    {{autoInfo.result[0].markModel}}
+  </div>
+  <div class="mt-2">
+    <div class="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 pt-5">
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500"><span>VIN</span>: <span
+            class="text-sm text-gray-900">{{autoInfo.result[0].VIN}}</span></dt>
+      </div>
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500"><span>Госномер</span>: <span
+            class="text-sm text-gray-900">{{autoInfo.result[0].numberPlate}}</span></dt>
+      </div>
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500"><span>Номер кузова</span>: <span
+            class="text-sm text-gray-900">{{autoInfo.result[0].VIN}}</span></dt>
+      </div>
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500"><span>Мощность двигателя</span>: <span
+            class="text-sm text-gray-900">{{autoInfo.result[0].enginePower}} л. с.</span></dt>
+      </div>
+    </div>
+    <div class="mt-8">
+      <div class="pb-3 border-b border-gray-200">
+        <div class="text-lg leading-6 font-medium text-gray-900">История ОСАГО</div>
+      </div>
+      <div>
+        <dl class="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 pt-5">
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500">Полис: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].osagoId}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500">Статус договора:
+              <span class="text-sm text-gray-900 ml-1">
+                <span *ngIf="autoInfo.result[0].osagoIsActive">
+                  <div style="background: #0f0; width: 12px; height: 12px; border-radius: 50%; display: inline-block;">
+                  </div>
+                  <div style="display: inline-block;">Действует</div>
+                </span>
+                <span *ngIf="!autoInfo.result[0].osagoIsActive">
+                  <div style="background: #f00; width: 12px; height: 12px; border-radius: 50%; display: inline-block;">
+                  </div>
+                  <div style="display: inline-block;">Прекратил действие</div>
+                </span>
+              </span>
+            </dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Страховая компания</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].company}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Регион</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].usageRegion}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>КБМ</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].kbm}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Марка, модель</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].markModel}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Гос номер</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].numberPlate}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>VIN</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].VIN}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Номер кузова</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].VIN}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Мощность</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].enginePower}} л.с.</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Цель использования</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].usageTarget}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Страхователь</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].insurer}}</span></dt>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium text-gray-500"><span>Собственник</span>: <span
+                class="text-sm text-gray-900">{{autoInfo.result[0].owner}}</span></dt>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>

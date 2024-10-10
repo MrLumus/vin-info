@@ -1,0 +1,7 @@
+{
+  "/insurance/*": {
+    "target": "https://new-programmatic.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
